@@ -15,10 +15,10 @@ const App = () => {
     <div className="App">
       <h1 className="titleTweet">Sohamu tweets</h1>
       <div className="Tweets">
-        <Tweet name="Armando"/>
-        <Tweet name="Harland"/>
-        <Tweet name="Ivonne"/>
-        <Tweet name="Abraham"/>
+        <Tweet name="Armando" message="Soy nuevo"/>
+        <Tweet name="Harland" message="Soy de desarrollo"/>
+        <Tweet name="Ivonne" message="Soy de UX"/>
+        <Tweet name="Abraham" message="Yo también desarrollo"/>
       </div>
       <Saludo />
     </div>

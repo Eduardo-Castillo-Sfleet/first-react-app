@@ -1,12 +1,12 @@
 import React from 'react';
 import './App.css'
 
-const Tweet = (props) => {
+const Tweet = ({name, message}) => {
     return(
         <div className="tweet">
-            <h3>{props.name}</h3>
-            <p>Esto es un tweet :)</p>
-            <h3>Likes:</h3>
+            <h3>{name}</h3>
+            <p>{message}</p>
+            <h3>{Math.floor((Math.random()*10)+2)}</h3>
         </div>
     );
 }
