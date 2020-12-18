@@ -1,5 +1,5 @@
 //0. Import libraries
-import React from 'react';
+import React, { useState } from 'react';
 import Saludo from './saludo'
 import Tweet from './Tweet'
 
@@ -7,9 +7,12 @@ import Tweet from './Tweet'
 //1. Create a component
 const App = () => {
 
-  const saludar = () => {
-    console.log('Hola');
-  }
+  const [touch, set] = useState(false)
+  const [count, setCount] = useState(0);
+
+const increment = () => {
+  setCount(count+1)
+}
 
   return(
     <div className="App">
@@ -21,6 +24,8 @@ const App = () => {
         <Tweet name="Abraham" message="Yo también desarrollo"/>
       </div>
       <Saludo />
+      <button onClick={increment} className="botonSaludo">Increment</button>
+      <h3 className="contador">{count}</h3>
     </div>
   );
 }
