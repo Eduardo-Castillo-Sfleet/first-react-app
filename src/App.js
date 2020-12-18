@@ -8,21 +8,23 @@ import Tweet from './Tweet'
 const App = () => {
 
   const [isTitleBlue, setTitleBlue] = useState(false)
-  const [count, setCount] = useState(0);
+  const [count, setCount] = useState(0)
+  const [mensaje, setMensaje] = useState(true)
 
-const increment = () => {
-  setCount(count+1)
-  setTitleBlue(!isTitleBlue)
-}
+  const increment = () => {
+    setCount(count+1)
+    setTitleBlue(!isTitleBlue)
+    setMensaje(!mensaje)
+  }
 
   return(
     <div className="App">
       <h1 className={isTitleBlue ? 'titleBlue' : 'titleTweet'}>Sohamu tweets</h1>
       <div className="Tweets">
-        <Tweet name="Armando" message="Soy nuevo"/>
-        <Tweet name="Harland" message="Soy de desarrollo"/>
-        <Tweet name="Ivonne" message="Soy de UX"/>
-        <Tweet name="Abraham" message="Yo también desarrollo"/>
+        <Tweet name="Armando" message={mensaje ? 'Hola sou nuevo' :'Me desactivaste):'}/>
+        <Tweet name="Harland" message={mensaje ? 'Hola soy developer' :'Me desactivaste):'}/>
+        <Tweet name="Ivonne" message={mensaje ? 'Hola soy diseñadora' :'Me desactivaste):'}/>
+        <Tweet name="Abraham" message={mensaje ? 'Hola me gusta el front' :'a mi tambien):'}/>
       </div>
       <Saludo />
       <button onClick={increment} className="botonSaludo">Increment</button>
