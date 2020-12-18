@@ -7,16 +7,17 @@ import Tweet from './Tweet'
 //1. Create a component
 const App = () => {
 
-  const [touch, set] = useState(false)
+  const [isTitleBlue, setTitleBlue] = useState(false)
   const [count, setCount] = useState(0);
 
 const increment = () => {
   setCount(count+1)
+  setTitleBlue(!isTitleBlue)
 }
 
   return(
     <div className="App">
-      <h1 className="titleTweet">Sohamu tweets</h1>
+      <h1 className={isTitleBlue ? 'titleBlue' : 'titleTweet'}>Sohamu tweets</h1>
       <div className="Tweets">
         <Tweet name="Armando" message="Soy nuevo"/>
         <Tweet name="Harland" message="Soy de desarrollo"/>

@@ -15,6 +15,12 @@
   text-transform: uppercase;
 }
 
+.titleBlue{
+  padding-top: 3%;
+  color: #61dafb;
+  text-transform: uppercase;
+}
+
 .Tweets{
   text-align: center;
   background-color: #282c34;
