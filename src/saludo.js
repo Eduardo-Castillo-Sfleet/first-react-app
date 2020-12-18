@@ -1,4 +1,5 @@
 import React from 'react';
+import './App.css'
 
 const Saludo = () => {
 
@@ -8,7 +9,7 @@ const Saludo = () => {
 
     return(
         <div>
-            <button onClick={saludar}>
+            <button onClick={saludar} className="botonSaludo">
                 saludo
             </button>
         </div>
