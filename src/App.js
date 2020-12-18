@@ -13,12 +13,12 @@ const App = () => {
 
   return(
     <div className="App">
-      <h1>Hello React</h1>
+      <h1 className="titleTweet">Sohamu tweets</h1>
       <div className="Tweets">
-        <Tweet />
-        <Tweet />
-        <Tweet />
-        <Tweet />
+        <Tweet name="Armando"/>
+        <Tweet name="Harland"/>
+        <Tweet name="Ivonne"/>
+        <Tweet name="Abraham"/>
       </div>
       <Saludo />
     </div>

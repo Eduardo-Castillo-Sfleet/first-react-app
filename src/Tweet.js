@@ -1,10 +1,10 @@
 import React from 'react';
 import './App.css'
 
-const Tweet = () => {
+const Tweet = (props) => {
     return(
         <div className="tweet">
-            <h3>Nombre</h3>
+            <h3>{props.name}</h3>
             <p>Esto es un tweet :)</p>
             <h3>Likes:</h3>
         </div>
